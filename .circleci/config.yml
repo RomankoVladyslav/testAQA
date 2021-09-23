@@ -1,0 +1,24 @@
+# This config is equivalent to both the '.circleci/extended/orb-free.yml' and the base '.circleci/config.yml'
+version: 2
+jobs:
+  build:
+    docker:
+      - image: mcr.microsoft.com/playwright:focal
+    steps:
+      - checkout
+
+      - run:
+          command: npm install
+
+      - run:
+          command: |
+            # # Start local server
+            # npm run start &
+            # npx wait-on http://localhost:3000
+            # replace below with command you want to run, example for running a script below
+            # npx playwright test case1
+            # npx playwright test case2
+
+          # This is the node version to use for the `cimg/node` tag
+          # Relevant tags can be found on the CircleCI Developer Hub
+          # https://circleci.com/developer/images/image/cimg/node
