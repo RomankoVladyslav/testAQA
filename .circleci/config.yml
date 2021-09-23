@@ -12,10 +12,10 @@ jobs:
 
       - run:
           command: |
-            # # Start local server
-            # npm run start &
-            # npx wait-on http://localhost:3000
-            # replace below with command you want to run, example for running a script below
+#             # Start local server
+#             npm run start &
+#             npx wait-on http://localhost:3000
+#             replace below with command you want to run, example for running a script below
              npx playwright test case1
              npx playwright test case2
 
