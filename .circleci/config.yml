@@ -7,12 +7,12 @@ jobs:
     steps:
       - checkout
 
-      - run: Go to folder
+      - run:
           command: cd autotests
-      - run: Install deps
+      - run:
           command: npm install
 
-      - run: Run tests
+      - run:
           command: npm run test
 #             # Start local server
 #             npm run start &
