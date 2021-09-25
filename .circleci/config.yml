@@ -8,15 +8,17 @@ jobs:
       - checkout
 
       - run:
-          name: "Go to folder with tests"
-          command: cd ./autotests
-      - run:
           name: "Install dependencies"
           command: npm install
 
       - run:
           name: "Run UI tests"
-          command: npm run test
+          command: npm run test:ui
+
+      - run:
+          name: "Run API tests"
+          command: npm run test:api
+
 #             # Start local server
 #             npm run start &
 #             npx wait-on http://localhost:3000
