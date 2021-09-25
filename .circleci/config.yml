@@ -7,11 +7,13 @@ jobs:
     steps:
       - checkout
 
-      - run:
+      - run: Go to folder
+          command: cd autotests
+      - run: Install deps
           command: npm install
 
-      - run:
-          command: npx playwright test case1
+      - run: Run tests
+          command: npm run test
 #             # Start local server
 #             npm run start &
 #             npx wait-on http://localhost:3000
