@@ -8,11 +8,14 @@ jobs:
       - checkout
 
       - run:
-          command: cd autotests
+          name: "Go to folder with tests"
+          command: cd ./autotests
       - run:
+          name: "Install dependencies"
           command: npm install
 
       - run:
+          name: "Run UI tests.
           command: npm run test
 #             # Start local server
 #             npm run start &
