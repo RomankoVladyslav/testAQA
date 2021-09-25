@@ -15,7 +15,7 @@ jobs:
           command: npm install
 
       - run:
-          name: "Run UI tests.
+          name: "Run UI tests"
           command: npm run test
 #             # Start local server
 #             npm run start &
